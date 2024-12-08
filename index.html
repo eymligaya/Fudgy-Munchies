@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fudgy Munchies - Your go-to shop for delicious and irresistible treats! Explore our wide range of sweets, cookies, and desserts.">
+    <meta name="keywords" content="fudgy munchies, treats, cookies, desserts, sweets, chocolate, online bakery, brownies, homemade, bite-size, browny, indulge, affordable">
+    <meta name="author" content="Fudgy Brownies">
+    <meta name="robots" content="index, follow">
+    <title>Fudgy Munchies</title>
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="script.js">
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Scroll to Top Arrow -->
+<div class="scroll-to-top">
+        <a href="#home"><i class="fas fa-arrow-up"></i></a> <!-- This links to the #home section -->
+</div>
+
+<!-- header section start page -->
+
+<header class="header">
+    <div class="logo-container">
+        <a href="index.html" class="logo">
+            <img src="fudgylogo.png" alt="Fudgy Munchies Logo" />
+        </a>
+        <span class="logo-text">Fudgy Munchies</span>
+    </div>
+
+    <nav class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">About</a>
+        <a href="#">Review</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="icons">
+        <div id="menu-btn" class="fas fa-bars"></div>
+        <div id="search-btn" class="fas fa-search"></div>
+        <div id="cart-btn" class="fas fa-shopping-cart"></div>
+        <div id="login-btn" class="fas fa-user"></div>
+    </div>
+
+
+</header>
+
+<!-- home section start -->
+
+<section class="home" id="home">
+    <div class="slides-container">
+        <div class="slide active">
+            <div class="content">
+                <h3>Let's indulge the taste of homemade brownies</h3>
+            </div>
+            <div class="img">
+                <img decoding="async" src="img/home-img-1.png" alt="">
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="content">
+                <span>A budget-friendly brownies for you and your loved ones</span>
+                <h3>Fudgy Brownie that feels like home</h3>
+                <a href="#" class="btn">Get Yours Now!</a>
+            </div>
+            <div class="img">
+                <img decoding="async" src="img/home-img-2.png" alt="">
+            </div>
+        </div>
+    </div>
+<div id="next-slide" class="fas fa-angle-right" onclick="next()"></div>
+<div id="prev-slide" class="fas fa-angle-left" onclick="next()"></div>
+
+    </section>
+
+    
+<!-- category start  -->
+
+<div class="heading">
+    <h1>our shop</h1>
+    </div>
+
+<section class="category">
+
+<h1 class="title"> our <span>category</span> <a href="#">view all >></a> </h1>
+
+<div class="box-container">
+
+    <a href="#" class="box">
+        <img decoding="async" src="cat1.png" alt="">
+        <h3>Classic Brownies</h3>
+    </a>
+
+    <a href="#" class="box">
+        <img decoding="async" src="cat2.png" alt="">
+        <h3>Choco Chips Toppings</h3>
+    </a>
+
+    <a href="#" class="box">
+        <img decoding="async" src="cat3.png" alt="">
+        <h3>Nutty Toppings</h3>
+    </a>
+
+</div>
+
+</section>
+
+
+<!-- products section -->
+
+<section class="products">
+
+    <h1 class="title"> our <span>products</span> <a href="#">view all >></a> </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="img">
+                <img decoding="async" src="img/product-1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>4 Classic Brownies/box</h3>
+                <div class="price">Php99.99</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="img">
+                <img decoding="async" src="img/product-2.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>6 Classic Brownies/box</h3>
+                <div class="price">Php99.99</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="img">
+                <img decoding="async" src="img/product-3.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>4 Choco Chips Toppings/box</h3>
+                <div class="price">Php99.99</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="img">
+                <img decoding="async" src="img/product-4.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>6 Choco Chips Toppings/box</h3>
+                <div class="price">Php99.99</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="img">
+                <img decoding="async" src="img/product-5.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>4 Nutty Toppings/box</h3>
+                <div class="price">Php99.99</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="img">
+                <img decoding="async" src="img/product-6.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>6 Nutty Toppings/box</h3>
+                <div class="price">Php99.99</div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+        </div>
+
+</div>
+</section>
+
+
+<!-- about section start -->
+<div class="heading">
+    <h1>About us</h1>
+    </div>
+
+<section class="about">
+    <div class="img">
+         <img decoding="async" src="fudgylogo.png" alt="">
+    </div>
+
+    <div class="content">
+        <span>welcome to Fudgy Munchies!</span>
+        <h3>Nothing but a fudgy brownies that feels like home</h3>
+        <p>Fudgy munchies are bite-size brownies, offering chocolate flavor. Our munchies are to provide high-quality, indulgent treats in a convenient, bite-sized form, perfect for any occasion. Focusing on premium ingredients and customer satisfaction, we cater to individuals, families, and businesses looking for customized gifts or desserts. Initially operating through an online platform with local delivery.
+        </p>
+        <p></p>
+        <a href="#" class="btn">read more</a>
+    </div>
+</section>
+
+<!-- gallery section start -->
+
+<section class="gallery">
+    <h1 class="title"> our <span>gallery</span> <a href="#">view all >></a> </h1>
+    <div class="box-container">
+
+        <div class="box">
+            <img decoding="async" src="2.jpg" alt="">
+            <div class="icons">
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share-alt"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img decoding="async" src="3.jpg" alt="">
+            <div class="icons">
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share-alt"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img decoding="async" src="4.jpg" alt="">
+            <div class="icons">
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share-alt"></a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img decoding="async" src="5.jpg" alt="">
+            <div class="icons">
+                <a href="#" class="fas fa-eye"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-share-alt"></a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- client section start -->
+
+<div class="heading">
+    <h1>client's review</h1>
+</div>
+
+<section class="info-container">
+
+    <div class="info">
+        <img decoding="async" src="img/icons-1.png" alt="">
+        <div class="content">
+            <h3>fast delivery</h3>
+            <span>within 30 minutes</span>
+        </div>
+    </div>
+
+    <div class="info">
+        <img decoding="async" src="img/icons-2.png" alt="">
+        <div class="content">
+            <h3>Affordable</h3>
+            <span>Student-friendly</span>
+        </div>
+    </div>
+
+    <div class="info">
+        <img decoding="async" src="img/icons-3.png" alt="">
+        <div class="content">
+            <h3>Online Payments</h3>
+            <span>Gcash</span>
+        </div>
+    </div>
+
+</section>
+
+<!-- review section start -->
+
+<section class="review">
+
+    <div class="box">
+        <div class="user">
+            <img decoding="async" src="img/pic-1.png" alt="">
+            <div class="info">
+                <h3>edward bey</h3>
+                <span>happ client</span>
+            </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet, farhan aliqua. Ut enim ad minim veniam, quis</p>
+    </div>
+
+    <div class="box">
+        <div class="user">
+            <img decoding="async" src="img/pic-2.png" alt="">
+            <div class="info">
+                <h3>jenna bey</h3>
+                <span>happ client</span>
+            </div>
+        </div>
+        <p>Lorem ipsum dolor sit amet, farhan aliqua. Ut enim ad minim veniam, quis</p>
+    </div>
+
+
+</section>
+
+
+<!-- contact section start -->
+
+<div class="heading">
+    <h1>Contact us</h1>
+</div>
+
+<section class="contact">
+    <div class="icons-container">
+
+        <div class="icons">
+            <i class="fas fa-phone"></i>
+            <h3>our number</h3>
+            <p>+111-222-3333</p>
+            <p>+456-786-7890</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-envelope"></i>
+            <h3>our email</h3>
+            <p>fudgymunchies@gmail.com</p>
+        </div>
+
+        <div class="icons">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>our address</h3>
+            <p>1700 Parañaque City, Manila, Philippines</p>
+        </div>
+
+    </div>
+
+     <div class="row">
+         <form action="">
+             <h3>get in touch</h3>
+             <div class="inputBox">
+             <input type="text" placeholder="enter your name" class="box">
+             <input type="text" placeholder="enter your email" class="box">
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="enter your number" class="box">
+                <input type="text" placeholder="enter your subject" class="box">
+               </div>
+               <textarea placeholder=" your message" cols="30" rows="10"></textarea>
+               <input type="submit" value="send message" class="btn">
+         </form>
+         <iframe class="map" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30903.660925029453!2d120.9678773968503!3d14.487122650688928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ce7e21cc5b55%3A0x8f4bd761e13c4830!2sSan%20Dionisio%2C%20Metro%20Manila!5e0!3m2!1sen!2sph!4v1733602009685!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+   
+    </div>
+
+</section>
+
+<div class="space"></div>
+<!-- footer section start -->
+
+
+<section class="footer">
+    <div class="box-container">
+        <div class="box">
+            <h3>quick links</h3>
+        <a href="#"> <i class="fas fa-arrow-right"></i> Home</a>
+        <a href="#"> <i class="fas fa-arrow-right"></i>Shop</a>
+        <a href="#"> <i class="fas fa-arrow-right"></i>About</a>
+        <a href="#"> <i class="fas fa-arrow-right"></i> Review</a>
+        <a href="#"> <i class="fas fa-arrow-right"></i>Gallery</a>
+        <a href="#"> <i class="fas fa-arrow-right"></i>Contact</a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i>  my order </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i>  my favorite </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i>  my wishlist </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i>  my account </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i>  terms or use </a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="#"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="#"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="#"> <i class="fab fa-linkedin"></i> linkedin </a>
+            <a href="#"> <i class="fab fa-pinterest"></i> pinterest </a>
+        </div>
+
+        <div class="box">
+            <h3>newsletter</h3>
+            <p>subscribe for latest update</p>
+            <form action="">
+            <input type="email" placeholder="enter your email address">
+            <input type="submit" value="subscribe" class="btn">
+            </form>
+            <img decoding="async" src="img/payment.png" class="payments" alt="">
+        </div>
+    </div>
+</section>
+
+<section class="credit">2024 all rights reserved</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- custom js file link -->
+    <script src="main.js"></script>
+</body>
+</html>
