@@ -8,6 +8,8 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 }
 
+
+
 let slides = document.querySelectorAll('.home .slides-container .slide');
 let index = 0;
 
