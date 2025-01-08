@@ -735,13 +735,13 @@ padding:1rem 0;
 
 .footer .box-container .box p{
 font-size: 1.5rem;
-color: #000;
+color: #ffffff;
 padding-bottom: .5rem;
 }
 
 .footer .box-container .box a{
 font-size: 1.4rem;
-color: #000;
+color: #ffff;
 padding:1rem 0;
 display:block;
 }
@@ -777,7 +777,7 @@ margin-top: 2rem;
 .credit{
 text-align: center;
 background:var(--brown);
-color: #000;
+color: #ffffff;
 font-size:2rem;
 }
 
