@@ -8,6 +8,23 @@ window.onscroll = () => {
     navbar.classList.remove('active');
 }
 
+//for slides//
+let slides = document.querySelectorAll('.home .slides-container .slide');
+let index = 0;
+
+function next() {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length; // Increment and loop back to 0
+    slides[index].classList.add('active');
+}
+
+function prev() {
+    slides[index].classList.remove('active');
+    index = (index - 1 + slides.length) % slides.length; // Decrement and loop back to last
+    slides[index].classList.add('active');
+}
+
+
 // Select the toggle button and icon
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
@@ -38,6 +55,22 @@ function applyTheme() {
     }
 }
 
+
+
+const scriptURL = 'Your Google App Script URL'
+
+const form = document.forms['contact-form']
+
+form.addEventListener('submit', e => {
+  
+  e.preventDefault()
+  
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .then(response => alert("Thank you! Form is submitted" ))
+  .then(() => { window.location.reload(); })
+  .catch(error => console.error('Error!', error.message))
+})
+
 // for chatbot //
 
 const secret = '•••••••••'; // Your verification secret key
@@ -46,19 +79,4 @@ const userId = current_user.id // A string UUID to identify your user
 const hash = crypto.createHmac('sha256', secret).update(userId).digest('hex');
 
 
-
-let slides = document.querySelectorAll('.home .slides-container .slide');
-let index = 0;
-
-function next(){
-    slides[index].classList.remove('active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
-}
-
-function prev(){
-    slides[index].classList.remove('active');
-    index = (index - 1 + slides.length) % slides.length;
-    slides[index].classList.add('active');
-}
 
