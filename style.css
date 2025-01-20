@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
 
 
 html {
@@ -69,9 +69,6 @@ overflow-x: hidden;
 scroll-behavior: smooth;
 }
 
-body{
-background:#FFF2D7;
-}
 
 section{
 padding:3rem 9%;
@@ -88,7 +85,7 @@ border-bottom: 0.1rem solid rgba(0,0,0,0.7);
 }
 
 .heading h1{
-color: #A67B5B;
+color: #6F4E37;
 font-size:4rem;
 
 }
@@ -160,14 +157,14 @@ color: #fafafa; /* Match theme color */
 :root {
     --brown: #5c3920; /* Light mode brown */
     --text-color: #ffffff;
-    --background-color: #FFF8E8;
+    --background-color: #ffffff;
     --icon-color: #ffffff;
 }
 
 
 /* Define Dark Mode Variables */
 .dark-mode {
-    --background-color: #3B2A1A; /* Warm, chocolate-like brown */
+    --background-color: #AB886D; /* Warm, chocolate-like brown */
     --text-color: #F8EAD8;       /* Creamy beige for text */
     --icon-color: #D9A877;       /* Gold accent for icons */
 }
@@ -334,27 +331,54 @@ animation: fadeUp .4s linear;
 }
 
 .home #next-slide,
-.home #prev-slide{
-position: absolute;
-top: 50%; /* Center vertically */
-transform: translateY(-50%); /* Adjust for proper centering */
-height: 4rem; /* Adjust button size */
-width: 4rem;
-z-index: 999; /* Ensure buttons stay on top */
-padding: 0; /* No extra padding */
-border-radius: 90%; /* Make the buttons circular */
-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7); /* Add shadow for depth */
-border: 0.1rem solid rgba(0, 0, 0, 0.7); /* Add a border */
-text-align: center;
-background: var(--brown); /* Use your defined variable for brown */
-font-size: 1.5rem; /* Font size for arrows */
-color: #fff; /* White arrow color */
-cursor: pointer; /* Pointer cursor for hover effect */
-display: flex; /* Center arrow inside the button */
-justify-content: center;
-align-items: center;
-transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+.home #prev-slide {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    height: 4rem; /* Button size */
+    width: 4rem;
+    z-index: 999; /* Ensure buttons are above slides */
+    border-radius: 50%; /* Make buttons circular */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+    border: 0.1rem solid rgba(0, 0, 0, 0.7);
+    background: var(--brown); /* Button background color */
+    font-size: 1.5rem; /* Arrow size */
+    color: #fff; /* Arrow color */
+    display: flex; /* Center arrow inside button */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Hover effect for buttons */
+.home #next-slide:hover,
+.home #prev-slide:hover {
+    background: #222; /* Darker background on hover */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Positioning the buttons */
+.home #prev-slide {
+    left: 1rem; /* Adjust distance from left edge */
+}
+
+.home #next-slide {
+    right: 1rem; /* Adjust distance from right edge */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home #next-slide,
+    .home #prev-slide {
+        height: 3rem; /* Smaller button size */
+        width: 3rem;
+        font-size: 1.2rem; /* Adjust arrow size */
+        left: 0.5rem; /* Adjust positioning for smaller screens */
+        right: 0.5rem;
+    }
+}
+
 
 .home #next-slide:hover,
 .home #prev-slide:hover{
@@ -410,32 +434,32 @@ right:2rem;
     padding:1rem 0;
     }
 
-/*category*/
-.category .box-container{
+/*members*/
+.members .box-container{
 display:grid;
 grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 gap:1.5rem;
 padding:4rem 0;
 }
 
-.category .box-container .box{
+.members .box-container .box{
 text-align:center;
 box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
 border:0.1rem solid rgba(0,0,0,0.7);
 }
 
-.category .box-container .box img{
+.members .box-container .box img{
 height:21rem;
 width:21rem;
 }
 
-.category .box-container .box h3{
+.members .box-container .box h3{
 font-size: 2rem;
 margin: 1rem 0;
 color: #222;
 }
 
-.category .box-container .box:hover h3{
+.members .box-container .box:hover h3{
 color: #AB886D;
 }
 
@@ -521,6 +545,7 @@ font-size: 1.7rem;
 color: var(--brown);
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
 
 .gallery .box-container{
@@ -572,100 +597,15 @@ margin: 0 1.5rem;
 color: var(--brown);
 }
 
+/*review*/
 
 .info-container{
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-gap:1.5rem;
-}
-
-.info-container .info{
-display: flex;
-align-items: center;
-gap: 1.5rem;
-padding: 2rem 0;
-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
-border:0.1rem solid rgba(0,0,0,0.7);
-background: #FFF8E8;
-}
-.info-container .info:hover{
-background: #AB886D;
-}
-
-.info-container .info img{
-height: 7rem;
-}
-
-.info-container .info .content h3{
-font-size: 2rem;
-color: #222;
-padding-bottom: .5rem;
-}
-
-.info-container .info .content span{
-font-size: 1.5rem;
-color: #222;
-}
-
-.review{
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-gap:1.5rem;
-}
-
-.review .box{
-display: flex;
-align-items: center;
-gap: 1.5rem;
-padding: 2rem 0;
-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
-border:0.1rem solid rgba(0,0,0,0.7);
-background: #FFF8E8;
-}
-
-.review .box:hover{
-    background:#AB886D;
-}
-
-.review .box .user{
-display:flex;
-align-items: center;
-gap: 1.5rem;
-margin-bottom:1.5rem;
-}
-
-.review .box .user img{
-height:7rem;
-width:7rem;
-border-radius: 50%;
-}
-
-.review .box .user h3{
-font-size: 2.2rem;
-color:#222;
-}
-
-.review .box .user span{
-font-size: 1.4rem;
-color:#fff;
-}
-
-.review .box p{
-font-size: 1.4rem;
-color:#222;
-line-height: 2;
-}
-
-
-
-
-.gallery .box-container{
-display:grid;
-grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-gap:1.5rem;
-}
-
-.gallery .box-container .box{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap:1.5rem;
+    }
+    
+    .info-container .info{
     display: flex;
     align-items: center;
     gap: 1.5rem;
@@ -673,62 +613,26 @@ gap:1.5rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
     border:0.1rem solid rgba(0,0,0,0.7);
     background: #FFF8E8;
-}
+    }
+    .info-container .info:hover{
+    background: #AB886D;
+    }
+    
+    .info-container .info img{
+    height: 7rem;
+    }
+    
+    .info-container .info .content h3{
+    font-size: 2rem;
+    color: #222;
+    padding-bottom: .5rem;
+    }
+    
+    .info-container .info .content span{
+    font-size: 1.5rem;
+    color: #222;
+    }
 
-.gallery .box-container .box .img:hover img{
-transform:scale(1.2);
-}
-
-.gallery .box-container .box .img{
-height:25rem;
-width:100%;
-overflow:hidden;
-}
-
-.gallery .box-container .box .img img{
-height:100%;
-width:100%;
-object-fit: cover;
-}
-
-.gallery .box-container .box .content {
-padding:2rem 1.5rem;
-}
-
-.gallery .box-container .box .content .icons{
-border-bottom: 0.1rem solid rgba(0,0,0,0.1);
-padding-bottom: 1.7rem;
-margin-bottom:1.7rem;
-display: flex;
-align-items: center;
-justify-content:space-between;
-}
-
-.gallery .box-container .box .content .icons a{
-font-size:1.4rem;
-color:#222;
-}
-
-.gallery .box-container .box .content .icons a:hover{
-color:var(--brown);
-}
-
-.gallery .box-container .box .content .icons a i{
-color: #222;
-padding-right: .5rem;
-}
-
-.gallery .box-container .box .content h3{
-font-size: 2.2rem;
-color: #222;
-}
-
-.gallery .box-container .box .content p{
-font-size: 1.4rem;
-color: #222;
-line-height: 2;
-padding: 1rem 0;
-}
 
 .contact .icons-container{
 display: grid;
@@ -765,6 +669,18 @@ font-size: 1.5rem;
 line-height: 2;
 }
 
+.contact .icons-container .icons p a{
+    color:#222;
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+.contact .icons-container .icons p a:hover{
+    color:#D9A877;
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
 .contact .row{
 display:flex;
 flex-wrap: wrap;
@@ -777,6 +693,18 @@ padding:2rem;
 border: 0.1rem solid rgba(0,0,0,0.7);
 box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
 flex: 1 1 40rem;
+}
+
+.contact .row form .inputBox .box[type="number"] {
+    -moz-appearance: textfield; /* For Firefox */
+    -webkit-appearance: none; /* For Chrome, Safari, and Edge */
+    appearance: none; /* Standard */
+}
+
+.contact .row form .inputBox .box[type="number"]::-webkit-inner-spin-button,
+.contact .row form .inputBox .box[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* For Chrome, Safari, and Edge */
+    margin: 0; /* Remove margin from buttons */
 }
 
 .contact .row form h3{
@@ -853,17 +781,44 @@ transition: .2s linear;
 }
 
 .footer .box-container .box a:hover{
+padding-right: .5rem;
 color: #fff;
 transition: .2s linear;
     text-transform: none;
 }
 
-.footer .box-container .box a:hover i{
-padding-right: 2rem;
-
+.footer .box a {
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Adds space between the icon and text */
+    transition: all 0.3s ease;
 }
 
-.footer .box-container .box a i{
+.footer .box a:hover {
+    color: #6F4E37; /* Highlight color */
+    transform: translateX(5px); /* Move text and icon together */
+}
+
+.footer .box a i {
+    font-size: 1.6rem;
+    transition: transform 0.3s ease; /* Smooth icon movement */
+}
+
+.footer .box a:hover i {
+    transform: translateX(5px); /* Icon moves together with the text */
+}
+
+
+.footer .box-container .box a:hover i{
+padding-right: 2rem;
+transition: .2s linear;
+}
+
+.footer .box-container .box a i:hover{
 padding-right: .5rem;
 color: #fff;
 transition: .2s linear;
@@ -956,6 +911,6 @@ html{
 .products .box-container .box .img{
     width: 100%;
 }
-.category .box-container .box img{
+.members .box-container .box img{
     width: 100%;
 }
