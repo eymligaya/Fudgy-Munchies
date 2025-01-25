@@ -1,3 +1,6 @@
+
+
+
 html {
     scroll-behavior: smooth; /* Enables smooth scrolling */
 }
@@ -164,7 +167,7 @@ color: #fafafa; /* Match theme color */
 
 /* Define Dark Mode Variables */
 .dark-mode {
-    --background-color: #AB886D; /* Warm, chocolate-like brown */
+    --background-color: #8a6c56; /* Warm, chocolate-like brown */
     --text-color: #F8EAD8;       /* Creamy beige for text */
     --icon-color: #D9A877;       /* Gold accent for icons */
 }
@@ -285,8 +288,9 @@ color: #6F4E37;
 
 .home {
     padding-top: 15rem;
+    padding-bottom: 0;
     background-color: #AB886D;
-    background-position: initial;
+    background-size: cover; /* Ensure the background color fills the entire section */
     text-align: center; /* Center text within the home section */
 }
 
@@ -295,8 +299,30 @@ color: #6F4E37;
     align-items: center; /* Vertically center items within the slide */
     justify-content: center; /* Horizontally center items within the slide */
     flex-direction: column; /* Stack content vertically */
-    gap: 1rem; /* Add spacing between image and text */
+    gap: rem; /* Add spacing between image and text */
     display: none;
+    position: relative;
+}
+
+.home .slides-container .slide .content a.btn {
+    position: absolute;
+    bottom: 1rem; /* Distance from the bottom of the slide */
+    right: 1rem; /* Distance from the right of the slide */
+    padding: 0.75rem 1.5rem; /* Adjust padding for the button */
+    background-color: #F8EAD8; /* Button background color */
+    color: #6F4E37; /* Button text color */
+    text-decoration: none;
+    font-size: 2.25rem; /* Font size */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); /* Subtle shadow for the button */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Add hover effect for the button */
+.home .slides-container .slide .content a.btn:hover {
+    background-color: #AB886D; /* Button background on hover */
+    color: #ffffff; /* Text color on hover */
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.3); /* Shadow on hover */
 }
 
 .home .slides-container .slide.active {
@@ -304,10 +330,13 @@ color: #6F4E37;
 }
 
 .home .slides-container .slide .content img {
-    max-width: 100%; /* Make image responsive */
+    width: 100%; /* Ensure the image takes the full width */
     height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove extra space below image */
+    display: block;
+    margin: 0; /* Remove any margins */
+    padding: 0; /* Remove any padding */
 }
+
 
 .home .slides-container .slide.slide.active .content{
     flex: 1 1 40rem;
@@ -436,7 +465,7 @@ right:2rem;
 display:grid;
 grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 gap:1.5rem;
-padding:4rem 0;
+padding:2rem 0;
 }
 
 .members .box-container .box{
@@ -446,8 +475,8 @@ border:0.1rem solid rgba(0,0,0,0.7);
 }
 
 .members .box-container .box img{
-height:21rem;
-width:21rem;
+height:25rem;
+width:22rem;
 }
 
 .members .box-container .box h3{
@@ -461,15 +490,15 @@ color: #AB886D;
 }
 
 .products .box-container {
-display: -ms-grid;
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-gap: 1.5rem;
+    display: flex;
+    justify-content: space-between; /* Adjust spacing between boxes */
+    gap: 20px; /* Space between each product box */
+    padding: 20px; /* Add some padding */
 }
 
 .products .box-container .box {
 position: relative;
-background: #f3f3f3;
+background: #F8EAD8;
 text-align: center;
 overflow: hidden;
 box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
@@ -511,16 +540,17 @@ color:#fff;
 }
 
 .products .box-container .box .img {
-height:15rem;
-width:27rem;
-overflow: hidden;
+    height: 80%; /* Make the image container take full height */
+    width: 100%; /* Ensure the image container fills the width of the box */
+    overflow: hidden; /* Hide any overflow from the image */
 }
 
 .products .box-container .box .img img {
-height:100%;
-width:100%;
-object-fit: cover;
+    height: 100%; /* The image should stretch to fill the container height */
+    width: 100%; /* The image should stretch to fill the container width */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
 }
+
 
 .products .box-container .box .content {
 padding: 1.5rem;
@@ -537,10 +567,7 @@ color: #222;
 padding: 1rem 0;
 }
 
-.products .box-container .box .content .stars i {
-font-size: 1.7rem;
-color: var(--brown);
-}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
@@ -845,6 +872,7 @@ background:var(--brown);
 color: #ffffff;
 font-size:2rem;
 }
+
 
 
 
